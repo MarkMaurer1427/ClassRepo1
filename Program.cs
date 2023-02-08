@@ -1,4 +1,6 @@
 using WebApp1.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.SqlServer;
 
 namespace WebApp1
 {
@@ -10,6 +12,7 @@ namespace WebApp1
 
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<IBookRepository, BookRepo>();
+            builder.Services.AddDbContextPool<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookDBConnect")));
 
             var app = builder.Build();
 

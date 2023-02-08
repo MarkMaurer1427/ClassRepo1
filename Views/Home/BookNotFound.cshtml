@@ -1,0 +1,13 @@
+﻿@model int;
+@{
+    ViewBag.Title = "404 Error";
+}
+<center>
+<div class="alert-danger mt-1 mb-1">
+    <h1>404 error</h1>
+    <h4>Book with id = @Model cannot be found.</h4>
+</div>
+
+
+<a asp-controller="home" asp-action="index">Click to go back.</a>
+</center>

@@ -8,7 +8,7 @@ namespace WebApp1.Models
         public int Id { set; get; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(200)]
         public string Title { set; get; }
 
         [Required]

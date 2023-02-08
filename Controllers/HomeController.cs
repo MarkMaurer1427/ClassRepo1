@@ -22,8 +22,13 @@ namespace WebApp1.Controllers
         public IActionResult Details(int id)
         {
             Book b = iBookRepo.GetBook(id);
-            HomeDetailsViewModel detailsViewModel = new HomeDetailsViewModel(b, "Details Page");
-            return View(detailsViewModel);
+            if (b == null) { return View("BookNotFound",id); }
+            else
+            {
+                HomeDetailsViewModel detailsViewModel = new HomeDetailsViewModel(b, "Details Page");
+                return View(detailsViewModel);
+            }
+            
         }
 
         [HttpGet]
