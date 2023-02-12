@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Markm\\source\\repos\\WebApp1\\ClassRepo1\\WebApp1.csproj": {}
+    "C:\\Users\\Owner\\source\\repos\\WebApp1\\WebApp1\\WebApp1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Markm\\source\\repos\\WebApp1\\ClassRepo1\\WebApp1.csproj": {
+    "C:\\Users\\Owner\\source\\repos\\WebApp1\\WebApp1\\WebApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Markm\\source\\repos\\WebApp1\\ClassRepo1\\WebApp1.csproj",
+        "projectUniqueName": "C:\\Users\\Owner\\source\\repos\\WebApp1\\WebApp1\\WebApp1.csproj",
         "projectName": "WebApp1",
-        "projectPath": "C:\\Users\\Markm\\source\\repos\\WebApp1\\ClassRepo1\\WebApp1.csproj",
-        "packagesPath": "C:\\Users\\Markm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Markm\\source\\repos\\WebApp1\\ClassRepo1\\obj\\",
+        "projectPath": "C:\\Users\\Owner\\source\\repos\\WebApp1\\WebApp1\\WebApp1.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Owner\\source\\repos\\WebApp1\\WebApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Markm\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -80,6 +82,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[6.0.11, )"
             }
           },
           "imports": [
@@ -101,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

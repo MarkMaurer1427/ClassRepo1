@@ -5,7 +5,7 @@ namespace WebApp1.Models
     public class Book
     {
         [Required]
-        public int Id { set; get; }
+        public int BookId { set; get; }
 
         [Required]
         [MaxLength(200)]
@@ -16,7 +16,7 @@ namespace WebApp1.Models
         public string Author { set; get; }
 
         [Required]
-        public Language Language { set; get; }
+        public Language LanguageId { set; get; }
 
 
     }

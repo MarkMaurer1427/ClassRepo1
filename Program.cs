@@ -11,13 +11,16 @@ namespace WebApp1
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<IBookRepository, BookRepo>();
+            builder.Services.AddTransient<IBookRepository, SqlBookRepo>();
             builder.Services.AddDbContextPool<AppDBContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("BookDBConnect")));
 
             var app = builder.Build();
+            app.UseExceptionHandler("/Error/");
+            if(!app.Environment.IsDevelopment()) {
+                app.UseStatusCodePagesWithRedirects("/Error/{0}");
+            }
 
-
-
+            
             app.UseRouting();
             //app.UseDefaultFiles();
             app.UseStaticFiles();

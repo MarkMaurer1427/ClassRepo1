@@ -32,6 +32,49 @@ namespace WebApp1.Controllers
         }
 
         [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Book del = iBookRepo.GetBook(id);
+            return View(del);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Book del)
+        {
+            
+            if (del == null) { return View(); }
+            else
+            {
+                del = iBookRepo.DeleteBook(del.BookId);
+                return View();
+            }
+        
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Book bookChange = iBookRepo.GetBook(id);
+            return View(bookChange);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Book bookChange) 
+        {
+            if(ModelState.IsValid) 
+            {
+                
+                if (bookChange == null) { return View("BookNotFound", bookChange.BookId); }
+                else { 
+                    bookChange = iBookRepo.UpdateBook(bookChange);
+                    }
+                return View();
+
+            }
+            return View();
+        }
+
+        [HttpGet]
         public IActionResult Create()
         {
             return View();
@@ -43,7 +86,7 @@ namespace WebApp1.Controllers
             if (ModelState.IsValid)
             {
                 Book newBook = iBookRepo.AddBook(book);
-                return RedirectToAction("details", new { id = newBook.Id });
+                return RedirectToAction("details", new { id = newBook.BookId });
             }
             return View();
         }

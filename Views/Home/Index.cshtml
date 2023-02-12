@@ -1,21 +1,22 @@
-﻿@model List<Book>;
+﻿@model IEnumerable<Book>;
 
 @{
     ViewBag.Title = "Index View";
 }
 
-   <div class="card-deck">
+
+<div class="card-group">
        @foreach(var book in Model)
     {
-        <div class="card m-3">
+            <div class="card" style="width:300px; height:500px">
             <div class="header">
                 <h3>@book.Title</h3>
             </div>
-            <img class="card-img-top" src="~/Images/book_img.jpg">
+            <img class="card-img-top" src="~/images/book_img.png">
             <div class="card-footer text-center">
-                <a class="btn btn-primary" asp-controller="home" asp-action="details" asp-route-id="@book.Id">Details</a>
-                <a class="btn btn-primary" href="#">Edit</a>
-                <a class="btn btn-danger" href="#">Delete</a>
+                <a class="btn btn-primary" asp-controller="home" asp-action="details" asp-route-id="@book.BookId">Details</a>
+                <a class="btn btn-primary" asp-controller="home" asp-action="edit" asp-route-id="@book.BookId">Edit</a>
+                <a class="btn btn-danger" asp-controller="home" asp-action="delete" asp-route-id="@book.BookId">Delete</a>
             </div>
         </div>
     }

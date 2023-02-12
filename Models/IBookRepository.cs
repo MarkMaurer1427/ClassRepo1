@@ -8,6 +8,10 @@
 
         public Book AddBook(Book book);
 
+        public Book UpdateBook(Book book);
+
+        public Book DeleteBook(int id);
+
 
 
     }
